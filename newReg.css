@@ -1,0 +1,98 @@
+/* Form styling */
+form {
+  margin: auto;
+  width: 80%; /* Adjusted to percentage for responsiveness */
+  max-width: 600px; /* Added max-width for larger screens */
+  border: 2px solid #ccc; /* Reduced border size and softened color */
+  background-color: #f9f9f9; /* Slightly lighter background */
+  padding: 20px;
+  border-radius: 10px; /* Added border-radius for rounded corners */
+}
+
+/* Body styling */
+body {
+  background-color: #f4f4f4; /* Lighter background color */
+}
+
+/* Textarea styling */
+textarea {
+  width: calc(100% - 20px); /* Adjusted width for padding */
+  height: 150px; /* Increased height */
+  padding: 10px;
+  font-size: 1.1em; /* Slightly reduced font size */
+  background-color: #fff;
+  border: 1px solid #ccc; /* Reduced border size and softened color */
+  resize: vertical; /* Allow vertical resizing */
+  margin-bottom: 20px;
+}
+
+/* Input styling */
+.inputbox input {
+  width: calc(100% - 20px); /* Adjusted width for padding */
+  padding: 10px;
+  font-size: 1em; /* Slightly reduced font size */
+  border: 1px solid #ccc; /* Reduced border size and softened color */
+  background-color: #fff;
+  margin-bottom: 20px;
+  border-radius: 5px;
+}
+
+/* Label styling */
+.inputbox label {
+  font-size: 1.1em; /* Slightly reduced font size */
+  font-weight: bold;
+  margin-bottom: 5px; /* Reduced margin for tighter spacing */
+}
+
+/* Radiobox styling */
+.radiobox label {
+  display: inline-block;
+  font-size: 1em; /* Slightly reduced font size */
+  margin-right: 15px; /* Reduced margin for tighter spacing */
+}
+
+/* Dropdown styling */
+.dropdown select {
+  width: calc(100% - 20px); /* Adjusted width for padding */
+  padding: 10px;
+  font-size: 1em; /* Slightly reduced font size */
+  border: 1px solid #ccc; /* Reduced border size and softened color */
+  background-color: #fff;
+  margin-bottom: 20px;
+  border-radius: 5px;
+}
+
+/* Checkbox styling */
+.checkbox1 label {
+  font-size: 1.1em; /* Slightly reduced font size */
+  font-weight: bold;
+  margin-bottom: 5px; /* Reduced margin for tighter spacing */
+}
+
+/* Button styling */
+.mybutton {
+  text-align: center;
+}
+
+.mybutton input[type="submit"] {
+  background-color: #613b8a;
+  color: #fff;
+  border: none;
+  padding: 12px 24px; /* Increased padding for larger buttons */
+  font-size: 1.1em; /* Slightly reduced font size */
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease; /* Added transition for smoother hover effect */
+}
+
+.mybutton input[type="submit"]:hover {
+  background-color: #512a72; /* Darkened hover color */
+}
+
+/* Heading styling */
+h2 {
+  text-align: center;
+  margin-bottom: 20px;
+  color: #613b8a;
+  font-size: 2em; /* Slightly reduced font size */
+}
