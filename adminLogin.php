@@ -1,6 +1,10 @@
 <?php
 include_once 'dbh.inc.php';
 
+// Start session
+session_start();
+
+// Function to clean input characters
 function cleanChars($val)
 {
     $val = str_replace('&', '&amp;', $val);
@@ -20,6 +24,15 @@ function cleanChars($val)
     return $val;
 }
 
+// Set session timeout to 30 minutes
+$session_timeout = 1800; // 30 minutes
+if (isset($_SESSION['LAST_ACTIVITY']) && (time() - $_SESSION['LAST_ACTIVITY'] > $session_timeout)) {
+    // Expire session if inactive for too long
+    session_unset();     // unset $_SESSION variable for the run-time 
+    session_destroy();   // destroy session data in storage
+}
+$_SESSION['LAST_ACTIVITY'] = time(); // Update last activity time
+
 // Check if AdminName and AdminPass are set in $_POST
 if (isset($_POST['AdminName'], $_POST['AdminPass'])) {
     $adminName = cleanChars($_POST['AdminName']); 
@@ -35,11 +48,19 @@ if (isset($_POST['AdminName'], $_POST['AdminPass'])) {
         // Check if both AdminPass and $row['AdminPass'] are set
         if (isset($adminPass, $row['AdminPass']) && $adminPass == $row['AdminPass']) { 
             // Regenerate session ID
-            session_start();
             session_regenerate_id(true);
             
             $_SESSION['AdminName'] = $row['AdminName'];
             $_SESSION['Admin_ID'] = $row['Admin_ID'];
+
+            // Set session timeout and expiration
+            $_SESSION['CREATED'] = time(); // Creation time
+            $_SESSION['EXPIRES'] = $_SESSION['CREATED'] + $session_timeout; // Expiration time
+
+            // Set secure and httponly flags for session cookies
+            ini_set('session.cookie_secure', 1); // Only transmit cookies over secure HTTPS connection
+            ini_set('session.cookie_httponly', 1); // Make cookies accessible only via HTTP(S), not JavaScript
+            
             header('Location: adminLandingPage.html');
             exit();
         } else {
