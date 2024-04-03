@@ -1,7 +1,13 @@
 <?php
 // Define database connection parameters
 include_once 'dbhQuiz.inc.php';
-
+// Check if User_ID is set in the session
+if (!isset($_SESSION['AdminName'])) {
+    http_response_code(401);
+    // Redirect to a generic error page
+    header("Location: error.php"); 
+    exit; // Stop further execution
+}
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $question_text = $_POST["QuestionText"];
     $ans1 = $_POST["Ans1"];

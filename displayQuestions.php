@@ -29,7 +29,7 @@ if ($result->num_rows > 0) {
     <div class="left-links">
         <!-- Dynamic navigation links -->
         <a href="logout.php">Logout</a> 
-        <a href="adminPage.html">Add Question</a>
+        <a href="adminPage.php">Add Question</a>
         <a href="editContent.php">Edit Content</a>
         <a href="adminEditor.php">Manage User</a>
     </div>

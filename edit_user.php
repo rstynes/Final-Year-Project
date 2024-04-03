@@ -2,7 +2,13 @@
 // Include database connection
 include 'dbh.inc.php';
 include 'dbhKey.inc.php';
-
+// Check if User_ID is set in the session
+if (!isset($_SESSION['AdminName'])) {
+    http_response_code(401);
+    // Redirect to a generic error page
+    header("Location: error.php"); 
+    exit; // Stop further execution
+}
 // Check if user ID is provided in the URL
 if (isset($_GET['id'])) {
     $user_id = $_GET['id'];
@@ -120,6 +126,7 @@ if ($user_id) {
         <input type="text" id="phone" name="phone" value="<?php echo $phone; ?>" required><br><br>
         <label for="dob">Date of Birth:</label>
         <input type="date" id="dob" name="dob" value="<?php echo $dob; ?>" required><br><br>
+        <input type="hidden" name="csrf_token" value="<?php echo $_SESSION['csrf_token']; ?>">
         <input type="submit" value="Update User">
         <div class="mybutton">
     <a href="adminEditor.php" class="back-button"><button type="button">Back</button></a>

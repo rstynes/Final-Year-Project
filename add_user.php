@@ -57,6 +57,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         <label for="photo">Photo:</label>
         <input type="file" id="photo" name="photo" accept="image/*" required><br><br>
         <input type="submit" value="Add User">
+        <input type="hidden" name="csrf_token" value="<?php echo $_SESSION['csrf_token']; ?>">
     </form>
 </body>
 </html>

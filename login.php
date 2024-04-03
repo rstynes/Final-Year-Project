@@ -46,7 +46,6 @@ if (isset($_POST['Username']) && isset($_POST['Password']))
             
             $_SESSION['Username'] = $row['Username'];
             $_SESSION['User_ID'] = $row['User_ID'];
-
             // Set session timeout and expiration
             $_SESSION['CREATED'] = time(); // Creation time
             $_SESSION['LAST_ACTIVITY'] = $_SESSION['CREATED']; // Last activity time
@@ -60,11 +59,11 @@ if (isset($_POST['Username']) && isset($_POST['Password']))
             header('Location: HomePage.php');
             exit();
         } else {
-            header("Location: error.php?error=wrongpassword");
+            header("Location: error.php");
             exit();
         }
     } else {
-        header("Location: error.php?error=nouserfound");
+        header("Location: error.php");
         exit();
     }
 }

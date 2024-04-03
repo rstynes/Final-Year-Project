@@ -5,6 +5,14 @@ session_start();
 include_once 'dbh.inc.php';
 include_once 'dbhKey.inc.php';
 include_once 'decrypt.php';
+
+// Check if User_ID is set in the session
+if (!isset($_SESSION['AdminName'])) {
+    http_response_code(401);
+    // Redirect to a generic error page
+    header("Location: error.php"); 
+    exit; // Stop further execution
+}
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -20,7 +28,7 @@ include_once 'decrypt.php';
     <div class="left-links">
         <!-- Dynamic navigation links -->
         <a href="logout.php">Logout</a> 
-        <a href="adminPage.html">Add Question</a>
+        <a href="adminPage.php">Add Question</a>
         <a href="displayQuestions.php">Edit Questions</a>
         <a href="editContent.php">Edit Content</a>
     </div>
@@ -31,7 +39,7 @@ include_once 'decrypt.php';
 <body>
     <h1>Admin Panel</h1>
     <div class="admin-actions">
-        <a href="RegisterPage.html">Add User</a>
+        <a href="RegisterPage.php">Add User</a>
     </div>
     <div class="user-table">
         <h2>User List</h2>

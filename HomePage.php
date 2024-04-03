@@ -3,8 +3,15 @@
 include_once 'dbh.inc.php';
 include_once "decrypt.php";
 include_once 'dbhKey.inc.php';
-include_once 'homepageContent.php';
 session_start();
+// Check if User_ID is set in the session
+if (!isset($_SESSION['User_ID'])) {
+    // Set HTTP response code to 401
+    http_response_code(401);
+    // Redirect to a generic error page
+    header("Location: error.php"); // Change "error.php" to the path of your generic error page
+    exit; // Stop further execution
+}
 
 // Retrieve user's key data from KeyStore
 $FK_USER_ID = $_SESSION['User_ID'];
@@ -63,22 +70,31 @@ $photo = $row['Photo'];
 </nav>
 
 <main>
-        <section class="content-block">        
-            <div class="content">
-                <h2><?php echo $welcomeMessage; ?></h2>
-                <p><?php echo $introParagraph; ?></p>
-                <p><?php echo $phishingInfo; ?></p>
-                <h2><?php echo $exploreSections; ?></h2>
-                <ul>
-                    <?php foreach ($sectionsList as $section => $description): ?>
-                        <li><strong><?php echo $section; ?>:</strong> <?php echo $description; ?></li>
-                    <?php endforeach; ?>
-                </ul>
-                <h2><?php echo $startLearning; ?></h2>
-                <p><?php echo $endMessage; ?></p>
-            </div>
-        </section>
-    </main>
+    <section class="content-block">
+        <?php 
+        include_once 'content.php';
+        ?>
+        <h2><?php echo $homepageContentH2; ?></h2>
+        <p><?php echo $homepageContentP1; ?></p>
+        <p><?php echo $homepageContentP2; ?></p>
+        <h2><?php echo $homepageContentHead; ?></h2>
+        <ul>
+            <?php
+            // Explode the heredoc string by newline
+            $listItems = explode("\n", $homepageContentList);
+            foreach ($listItems as $item) {
+                // Trim any leading/trailing whitespace
+                $item = trim($item);
+                // Output each item as a list item
+                echo "<li>$item</li>"; 
+            }
+            ?>
+        </ul>
+        <h2><?php echo $homepageContentHead2; ?></h2>
+        <p><?php echo $homepageContentP3; ?></p>
+    </section>
+</main>
+
 </body>
 </html>
 

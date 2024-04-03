@@ -95,6 +95,7 @@ $conn3->close();
             <label for="CorrectAns">Correct Answer:</label>
             <input type="text" id="CorrectAns" name="CorrectAns" value="<?php echo $question['CorrectAns']; ?>">
             <br>
+            <input type="hidden" name="csrf_token" value="<?php echo $_SESSION['csrf_token']; ?>">
             <input type="submit" value="Update Question">
         </form>
     </div>

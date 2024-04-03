@@ -1,7 +1,14 @@
 <?php
 // Include database connection file
 include_once 'dbhQuiz.inc.php';
-
+include 'dbh.inc.php';
+// Check if User_ID is set in the session
+if (!isset($_SESSION['AdminName'])) {
+    http_response_code(401);
+    // Redirect to a generic error page
+    header("Location: error.php"); 
+    exit; // Stop further execution
+}
 // Check if form is submitted
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     // Retrieve form data
@@ -26,9 +33,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     header('Location: questionEditor.php');
     exit;
 }
-
 // Close the database connection
 $stmt->close();
 $conn3->close();
 ?>
-

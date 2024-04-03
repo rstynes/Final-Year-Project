@@ -1,18 +1,30 @@
 <?php
-$homepageContent = <<<HTML
-<h2>Welcome to PhishGuardian</h2>
-<p>PhishGuardian is your trusted resource for learning about phishing scams and staying safe online. Whether you're new to the internet or looking to enhance your cybersecurity knowledge, we're here to help.</p>
-<p>Phishing is a deceptive technique used by cybercriminals to trick individuals into revealing sensitive information such as passwords, credit card numbers, or personal details. To learn more about different types of phishing scams, navigate to the Phishing section in the navigation bar above.</p>
-<h2>Explore Our Sections:</h2>
-<ul>
-    <li><strong>Phishing Section:</strong> Discover the various types of phishing scams and how to identify them.</li>
-    <li><strong>Quiz:</strong> Test your knowledge with our interactive quiz on phishing awareness.</li>
-    <li><strong>Profile:</strong> Manage your account settings and personalize your PhishGuardian experience.</li>
-    <li><strong>About:</strong> Learn more about PhishGuardian, our mission, and how we strive to empower users like you.</li>
-</ul>
-<h2>Start Your Learning Today!</h2>
-<p>Begin your journey towards a safer online experience by exploring the sections above. If you have any questions or concerns, feel free to reach out to us.</p>
+$homepageContentH2 = <<<HTML
+Welcome to PhishGuardian
 HTML;
+$homepageContentP1 = <<<HTML
+PhishGuardian is your trusted resource for learning about phishing scams and staying safe online. Whether you're new to the internet or looking to enhance your cybersecurity knowledge, we're here to help.
+HTML;
+$homepageContentP2 = <<<HTML
+Phishing is a deceptive technique used by cybercriminals to trick individuals into revealing sensitive information such as passwords, credit card numbers, or personal details. To learn more about different types of phishing scams, navigate to the Phishing section in the navigation bar above.
+HTML;
+$homepageContentHead = <<<HTML
+Explore Our Sections:
+HTML;
+$homepageContentList = <<<HTML
+Phishing Section: Discover the various types of phishing scams and how to identify them.
+Quiz: Test your knowledge with our interactive quiz on phishing awareness.
+Profile: Manage your account settings and personalize your PhishGuardian experience.
+About: Learn more about PhishGuardian, our mission, and how we strive to empower users like you.
+HTML;
+$homepageContentHead2 = <<<HTML
+Start Your Learning Today!
+HTML;
+$homepageContentP3 = <<<HTML
+Begin your journey towards a safer online experience by exploring the sections above. If you have any questions or concerns, feel free to reach out to us.
+HTML;
+
+
 $phishContent = <<<HTML
 <h2>What is Phishing and Why is it Important to Be Aware?</h2>
 <p>Phishing is when cyber criminals pretend to be people or organizations you trust, like your bank or the government, to fool you into giving away personal information. They want things like your passwords, credit card numbers, or even who you are. It's like someone pretending to be your friend to get things from you that they shouldn't have.</p>

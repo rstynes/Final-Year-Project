@@ -6,6 +6,15 @@ include_once 'dbh.inc.php';
 include_once "decrypt.php";
 include_once 'dbhKey.inc.php';
 session_start();
+// Check if User_ID is set in the session
+if (!isset($_SESSION['User_ID'])) {
+    // Set HTTP response code to 401
+    http_response_code(401);
+
+    // Redirect to a generic error page
+    header("Location: error.php"); // Change "error.php" to the path of your generic error page
+    exit; // Stop further execution
+}
 $FK_USER_ID = $_SESSION['User_ID'];
 $stmt = $conn2->prepare("SELECT keyData FROM KeyStore WHERE User_ID = ?");
 $stmt->bind_param("s", $FK_USER_ID);
