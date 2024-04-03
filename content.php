@@ -1,4 +1,5 @@
 <?php
+//Homepage Content
 $homepageContentH2 = <<<HTML
 Welcome to PhishGuardian
 HTML;
@@ -24,107 +25,136 @@ $homepageContentP3 = <<<HTML
 Begin your journey towards a safer online experience by exploring the sections above. If you have any questions or concerns, feel free to reach out to us.
 HTML;
 
-
-$phishContent = <<<HTML
-<h2>What is Phishing and Why is it Important to Be Aware?</h2>
-<p>Phishing is when cyber criminals pretend to be people or organizations you trust, like your bank or the government, to fool you into giving away personal information. They want things like your passwords, credit card numbers, or even who you are. It's like someone pretending to be your friend to get things from you that they shouldn't have.</p>
-
-<h2>How Does it Work?</h2>
-<p>Picture getting an email or a message on your phone that seems to be from your bank. 
-    It might say something urgent like "Your account is in trouble, click here to fix it." 
-    But when you click that link or reply to the message, you're not talking to your bank. 
-    You're talking to a bad person who wants to steal from you. 
-    These bad people want your information to take your money or pretend to be you online.</p>
-<p>We'll explain more about this in our breakdown of different types of phishing.</p>
-<p>Below is a short video to help understand and visualize phishing and its dangers.</p>
+//Main Phishing Content
+$phishContentH1 = <<<HTML
+What is Phishing and Why is it Important to Be Aware?
+HTML;
+$phishContentP1 = <<<HTML
+Phishing is when cyber criminals pretend to be people or organizations you trust, like your bank or the government, to fool you into giving away personal information. They want things like your passwords, credit card numbers, or even who you are. It's like someone pretending to be your friend to get things from you that they shouldn't have.
+HTML;
+$phishContentH2 = <<<HTML
+How Does it Work?
+HTML;
+$phishContentP2 = <<<HTML
+Picture getting an email or a message on your phone that seems to be from your bank. It might say something urgent like 'Your account is in trouble, click here to fix it.' But when you click that link or reply to the message, you're not talking to your bank. You're talking to a bad person who wants to steal from you. These bad people want your information to take your money or pretend to be you online. We'll explain more about this in our breakdown of different types of phishing.
+HTML;
+$phishContentP3 = <<<HTML
+Below is a short video to help understand and visualize phishing and its dangers.
+HTML;
+$phishContentVideo = <<<HTML
 <div class="video-container">
     <iframe width="560" height="315" src="https://www.youtube.com/embed/Y7zNlEMDmI4" frameborder="0" allowfullscreen></iframe>
 </div>
-
-<h2>Explore More</h2>
-<p>Ready to learn more about phishing and how to protect yourself online? Click the buttons below to explore different types of phishing attacks:</p>
+HTML;
+$phishContentExploreH2 = <<<HTML
+Explore More
+HTML;
+$phishContentP4 = <<<HTML
+Ready to learn more about phishing and how to protect yourself online? Click the buttons below to explore different types of phishing attacks:
+HTML;
+$phishContentLinks = <<<HTML
 <a href="phishing.php" class="next-button">Email Phishing</a>
 <a href="websitePhishing.php" class="next-button">Website Phishing</a>
 <a href="Vishing.php" class="next-button">Vishing</a>
 <a href="Smishing.php" class="next-button">Smishing</a>
 HTML;
-$aboutContent = <<<HTML
-<h2>About PhishGuardian</h2>
-        
-        <p>At PhishGuardian, we understand the importance of staying safe online, especially for older adults who may be new to the digital world or who want to enhance their cybersecurity knowledge. 
-            That's why we've created a specialized online learning platform tailored just for you.</p>
 
-            <h2>What is PhishGuardian?</h2>
-            <p>PhishGuardian is your dedicated resource for learning about phishing and improving your online safety skills. 
-                Phishing is a common cyber threat where scammers try to trick you into giving away personal information, like passwords or credit card numbers. This is done by pretending to be someone trustworthy, such as a bank or government agency. 
-                Our platform provides comprehensive education and practical tools to help you recognize and avoid these scams. </p>
-
-                <h2>Why Choose PhishGuardian?</h2>
-                <p>Designed specifically for older adults, PhishGuardian offers user-friendly and accessible resources that cater to your learning needs. 
-                    Whether you're new to the internet or looking to sharpen your cybersecurity skills, our platform provides clear and easy-to-follow Information, tips, and a quiz to help you get ready to be online with confidence. </p>
-
-
-                <h2>What You'll Learn</h2>
-                <ul> 
-                <li>Understanding Phishing: Learn what phishing is, how it works, and why it's important to stay vigilant online.</li>
-                <li>Spotting Phishing Attempts: Discover common tactics used by scammers and develop skills to recognize phishing emails, messages, websites and more.</li>
-                <li>Protecting Yourself: Discover simple and effective ways to keep your personal information and money safe from phishing scams.</li>
-                <li>Reporting Phishing: Learn how to report phishing attempts and contribute to making the internet safer for everyone.</li>
-                </ul>
-    
-            <h2>Help us make it better</h2>
-            <p>Once you have gone through the various fetures and locations within this site, please take a few minutes to give us some feedback in the below survey to help make improvements to make it eaiser and more valuable for everyine. Thank you!</p>
-            <a href="https://forms.office.com/pages/responsepage.aspx?id=OcL4BRfLVUejRQSHUgY8O_56A3zGRdVHihmTCe-MRvVUQ1VEWDZGM1UyWjRRVk03UTA0SDZQS0g3SS4u" class="next-button">Survey</a>
+//About Content
+$aboutContentH1 = <<<HTML
+About PhishGuardian
 HTML;
-$emailPhishing = <<<HTML
-<h2>Email Phishing</h2>
-<p>
-    Email phishing is when bad people send fake emails to trick you into giving away important information like your usernames, passwords, or money details. These emails might look real, like they're from your bank or the government.
-</p>
-<p>
-    Here are some signs to watch for in phishing emails:
-</p>
-<ul>
-    <li><strong>Suspicious sender:</strong> Be careful of emails from people you don't know or emails with strange addresses.</li>
-    <li><strong>Urgency or fear:</strong> Phishing emails often try to scare you into doing something quickly.</li>
-    <li><strong>Asking for personal info:</strong> Real organizations usually don't ask for important info through email.</li>
-    <li><strong>Spelling mistakes:</strong> Watch out for emails with lots of mistakes. They might be phishing.</li>
-</ul>
-<p>
-    Here's a picture showing what these signs might look like in an email:
-</p>
+$aboutContentP1 = <<<HTML
+At PhishGuardian, we understand the importance of staying safe online, especially for older adults who may be new to the digital world or who want to enhance their cybersecurity knowledge. 
+That's why we've created a specialised online learning platform tailored just for you.
+HTML;
+$aboutContentH2 = <<<HTML
+What is PhishGuardian?
+HTML;
+$aboutContentP2 = <<<HTML
+PhishGuardian is your dedicated resource for learning about phishing and improving your online safety skills. 
+Phishing is a common cyber threat where scammers try to trick you into giving away personal information, like passwords or credit card numbers. This is done by pretending to be someone trustworthy, such as a bank or government agency. 
+Our platform provides comprehensive education and practical tools to help you recognize and avoid these scams. 
+HTML;
+$aboutContent3 = <<<HTML
+Why Choose PhishGuardian?
+HTML;
+$aboutContentP3 = <<<HTML
+Designed specifically for older adults, PhishGuardian offers user-friendly and accessible resources that cater to your learning needs. 
+Whether you're new to the internet or looking to sharpen your cybersecurity skills, our platform provides clear and easy-to-follow Information, tips, and a quiz to help you get ready to be online with confidence.
+HTML;
+$aboutContentH4 = <<<HTML
+What You'll Learn
+HTML;
+$aboutContentList = <<<HTML
+Understanding Phishing: Learn what phishing is, how it works, and why it's important to stay vigilant online.
+Spotting Phishing Attempts: Discover common tactics used by scammers and develop skills to recognize phishing emails, messages, websites and more.
+Protecting Yourself: Discover simple and effective ways to keep your personal information and money safe from phishing scams.
+Reporting Phishing: Learn how to report phishing attempts and contribute to making the internet safer for everyone.
+HTML;
+$aboutContentH5 = <<<HTML
+Help us make it better
+HTML;
+$aboutContentP4 = <<<HTML
+Once you have gone through the various features and locations within this site, please take a few minutes to give us some feedback in the below survey to help make improvements to make it easier and more valuable for everyone. Thank you!
+HTML;
+$aboutContentLink = <<<HTML
+<a href="https://forms.office.com/pages/responsepage.aspx?id=OcL4BRfLVUejRQSHUgY8O_56A3zGRdVHihmTCe-MRvVUQ1VEWDZGM1UyWjRRVk03UTA0SDZQS0g3SS4u" class="next-button">Survey</a>
+HTML;
+
+//Email Phishing Content
+$emailContentH1 = <<<HTML
+Email Phishing
+HTML;
+$emailContentP1 = <<<HTML
+Email phishing is when bad people send fake emails to trick you into giving away important information like your usernames, passwords, or money details. These emails might look real, like they're from your bank or the government.
+Here are some signs to watch for in phishing emails:
+HTML;
+$emailContentList1 = <<<HTML
+Suspicious sender: Be careful of emails from people you don't know or emails with strange addresses.
+Urgency or fear: Phishing emails often try to scare you into doing something quickly.
+Asking for personal info: Real organizations usually don't ask for important info through email.
+Spelling mistakes: Watch out for emails with lots of mistakes. They might be phishing.
+HTML;
+$emailContentP2 = <<<HTML
+Here's a picture showing what these signs might look like in an email:
+HTML;
+$emailPic = <<<HTML
 <div class="image-examples">
     <img src="email_phishing_example1.jpg" alt="Email Phishing Example 1" class="example-image">
 </div>
-<p>
-    To keep safe from email phishing, remember these tips:
-</p>
-<ul>
-    <li><strong>Check sender:</strong> Make sure the email comes from who it says it's from before you click on anything or share personal info.</li>
-    <li><strong>Don't click strange links:</strong> Hover over links to see where they go. If they look odd, don't click them.</li>
-    <li><strong>Be careful with attachments:</strong> Don't open attachments from people you don't know. They might have bad stuff in them.</li>
-    <li><strong>Use spam filters:</strong> Turn on spam filters in your email to help stop phishing emails.</li>
-</ul>
-<p>
-    Remember, it's best to be careful with emails you didn't expect. If you think an email might be phishing, tell your email provider and delete it.
-</p>
-
-<section class="faq">
-    <h2>Frequently Asked Questions</h2>
-    <p>Here are some common questions about email phishing:</p>
-    <ul>
-        <li>Q: How can I identify a phishing email?</li>
-        <li>A: Look for signs such as suspicious sender addresses, urgent language, and requests for personal information.</li>
-        <li>Q: What should I do if I receive a phishing email?</li>
-        <li>A: Do not click on any links or provide any personal information. Report the email to your email provider.</li>
-    </ul>
-</section>
-
+HTML;
+$emailContentP3 = <<<HTML
+To keep safe from email phishing, remember these tips:
+HTML;
+$emailContentList2 = <<<HTML
+Check sender: Make sure the email comes from who it says it's from before you click on anything or share personal info.
+Don't click strange links: Hover over links to see where they go. If they look odd, don't click them.
+Be careful with attachments: Don't open attachments from people you don't know. They might have bad stuff in them.
+Use spam filters: Turn on spam filters in your email to help stop phishing emails.
+HTML;
+$emailContentP4 = <<<HTML
+Remember, it's best to be careful with emails you didn't expect. If you think an email might be phishing, tell your email provider and delete it.
+HTML;
+$emailContentH1 = <<<HTML
+Frequently Asked Questions
+HTML;
+$emailContentP5 = <<<HTML
+Here are some common questions about email phishing:
+HTML;
+$emailContentList3 = <<<HTML
+Q: How can I identify a phishing email?
+A: Look for signs such as suspicious sender addresses, urgent language, and requests for personal information.
+Q: What should I do if I receive a phishing email?
+A: Do not click on any links or provide any personal information. Report the email to your email provider.
+HTML;
+$emailContentLink = <<<HTML
 <a href="phishMain.php" class="next-button">Phishing</a>
 <a href="websitePhishing.php" class="next-button">Website Phishing</a>
 <a href="Vishing.php" class="next-button">Vishing</a>
 <a href="Smishing.php" class="next-button">Smishing</a>
 HTML;
+
+//Vishing Content
 $vishing = <<<HTML
 <h2>Vishing (Voice Phishing)</h2>
             <p>
@@ -185,6 +215,8 @@ $vishing = <<<HTML
             <a href="Smishing.php" class="next-button">Smishing</a>
 
 HTML;
+
+//Smishing content
 $smishing = <<<HTML
 <h2>Smishing (SMS Phishing)</h2>
             <p>
@@ -229,6 +261,8 @@ $smishing = <<<HTML
             <a href="websitePhishing.php" class="next-button">Website Phishing</a>
             <a href="Vishing.php" class="next-button">Vishing</a>
 HTML;
+
+//Web Phishing Content
 $webPhishing = <<<HTML
 <h2>Website Phishing</h2>
 <p>
@@ -278,7 +312,17 @@ $webPhishing = <<<HTML
 <a href="Vishing.php" class="next-button">Vishing</a>
 <a href="Smishing.php" class="next-button">Smishing</a>
 HTML;
+
+//Resources Content
 $resources = <<<HTML
-<!-- Resources Content -->
+    <h2>Helpful Resources for Phishing Awareness</h2>
+    <p>Here are some valuable resources to enhance your knowledge and protect yourself from phishing scams:</p>
+    <ul>
+    <li><a href="https://www.aarp.org/money/scams-fraud/info-2019/how-to-protect-yourself-from-phishing.html">AARP - How to Protect Yourself from Phishing Scams</a> - Tips and advice specifically for older adults from the American Association of Retired Persons (AARP).</li>
+    <li><a href="https://www.consumer.ftc.gov/features/feature-0007-imposter-scams">FTC - Imposter Scams</a> - Information from the Federal Trade Commission (FTC) on imposter scams, which often involve phishing tactics targeting seniors.</li>
+    <li><a href="https://www.getcybersafe.gc.ca/cnt/rsrcs/sfttng/prtct-yrslf-f-eng.aspx">Get Cyber Safe</a> - Resources from the Canadian government aimed at helping seniors protect themselves from online threats, including phishing.</li>
+    <li><a href="https://www.ncsc.gov.uk/guidance/suspicious-email-actions">NCSC - Suspicious Email Actions</a> - Guidance from the UK's National Cyber Security Centre (NCSC) on what to do if you receive a suspicious email, a common phishing tactic.</li>
+    <li><a href="https://www.seniorplanet.org/cyber-security/">Senior Planet - Cyber Security</a> - Articles and resources focused on cyber security for seniors, including tips for recognizing and avoiding phishing attempts.</li>
+    </ul>
 HTML;
 ?>

@@ -73,7 +73,17 @@ $photo = $row['Photo'];
     <section class="content-block">
     <?php 
         include_once 'content.php';
-        echo $phishContent; ?>
+    ?>
+        <h2><?php echo $phishContentH1; ?></h2>
+        <p><?php echo $phishContentP1; ?></p>
+        <h2><?php echo $phishContentH2; ?></h2>
+        <p><?php echo $phishContentP2; ?></p>
+        <p><?php echo $phishContentP3; ?></p>
+        <?php echo $phishContentVideo; ?>
+        <h2><?php echo $phishContentExploreH2; ?></h2>
+        <p><?php echo $phishContentP4; ?></p>
+        <?php echo $phishContentLinks; ?>
+
     </section>
 </main>
 

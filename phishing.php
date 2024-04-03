@@ -71,7 +71,52 @@ $photo = $row['Photo'];
         <section class="content-block">
         <?php 
         include_once 'content.php';
-        echo $emailPhishing; ?>
+        ?>
+        <h2><?php echo $emailContentH1; ?></h2>
+        <p><?php echo $emailContentP1; ?></p>
+        <ul>
+            <?php
+            // Explode the heredoc string by newline
+            $listItems = explode("\n", $emailContentList1);
+            foreach ($listItems as $item) {
+                // Trim any leading/trailing whitespace
+                $item = trim($item);
+                // Output each item as a list item
+                echo "<li>$item</li>"; 
+            }
+            ?>
+        </ul>
+        <p><?php echo $emailContentP2; ?></p>
+        <?php echo $emailPic; ?>
+        <p><?php echo $emailContentP3; ?></p>
+        <ul>
+            <?php
+            // Explode the heredoc string by newline
+            $listItems = explode("\n", $emailContentList2);
+            foreach ($listItems as $item) {
+                // Trim any leading/trailing whitespace
+                $item = trim($item);
+                // Output each item as a list item
+                echo "<li>$item</li>"; 
+            }
+            ?>
+        </ul>
+        <p><?php echo $emailContentP4; ?></p>
+        <h2><?php echo $emailContentH1; ?></h2>
+        <p><?php echo $emailContentP5; ?></p>
+        <ul>
+            <?php
+            // Explode the heredoc string by newline
+            $listItems = explode("\n", $emailContentList3);
+            foreach ($listItems as $item) {
+                // Trim any leading/trailing whitespace
+                $item = trim($item);
+                // Output each item as a list item
+                echo "<li>$item</li>"; 
+            }
+            ?>
+        </ul>
+        <?php echo $emailContentLink; ?>
         </section>
     </main>
 </body>

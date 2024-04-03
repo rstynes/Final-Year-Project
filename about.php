@@ -74,12 +74,32 @@ $photo = $row['Photo'];
     <!-- Main Content -->
     <main>
     <section class="content-block">
-    <?php 
+        <?php 
         include_once 'content.php';
-        echo $aboutContent; ?>
+        ?>
+        <h2><?php echo $aboutContentH1; ?></h2>
+        <p><?php echo $aboutContentP1; ?></p>
+        <h2><?php echo $aboutContentH2; ?></h2>
+        <p><?php echo $aboutContentP2; ?></p>
+        <h2><?php echo $aboutContent3; ?></h2>
+        <p><?php echo $aboutContentP3; ?></p>
+        <h2><?php echo $aboutContentH4; ?></h2>
+        <ul>
+            <?php
+            // Explode the heredoc string by newline
+            $listItems = explode("\n", $aboutContentList);
+            foreach ($listItems as $item) {
+                // Trim any leading/trailing whitespace
+                $item = trim($item);
+                // Output each item as a list item
+                echo "<li>$item</li>"; 
+            }
+            ?>
+        </ul>
+        <h2><?php echo $aboutContentH5; ?></h2>
+        <p><?php echo $aboutContentP4; ?></p>
+        <?php echo $aboutContentLink; ?>
     </section>
-        
     </main>
-
 </body>
 </html>
