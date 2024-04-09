@@ -1,7 +1,7 @@
 <?php
-//Homepage Content
+//Homepage
 $homepageContentH2 = <<<HTML
-Welcome to PhishGuardian
+What is PhishGuardian?
 HTML;
 $homepageContentP1 = <<<HTML
 PhishGuardian is your trusted resource for learning about phishing scams and staying safe online. Whether you're new to the internet or looking to enhance your cybersecurity knowledge, we're here to help.
@@ -25,41 +25,7 @@ $homepageContentP3 = <<<HTML
 Begin your journey towards a safer online experience by exploring the sections above. If you have any questions or concerns, feel free to reach out to us.
 HTML;
 
-//Main Phishing Content
-$phishContentH1 = <<<HTML
-What is Phishing and Why is it Important to Be Aware?
-HTML;
-$phishContentP1 = <<<HTML
-Phishing is when cyber criminals pretend to be people or organizations you trust, like your bank or the government, to fool you into giving away personal information. They want things like your passwords, credit card numbers, or even who you are. It's like someone pretending to be your friend to get things from you that they shouldn't have.
-HTML;
-$phishContentH2 = <<<HTML
-How Does it Work?
-HTML;
-$phishContentP2 = <<<HTML
-Picture getting an email or a message on your phone that seems to be from your bank. It might say something urgent like 'Your account is in trouble, click here to fix it.' But when you click that link or reply to the message, you're not talking to your bank. You're talking to a bad person who wants to steal from you. These bad people want your information to take your money or pretend to be you online. We'll explain more about this in our breakdown of different types of phishing.
-HTML;
-$phishContentP3 = <<<HTML
-Below is a short video to help understand and visualize phishing and its dangers.
-HTML;
-$phishContentVideo = <<<HTML
-<div class="video-container">
-    <iframe width="560" height="315" src="https://www.youtube.com/embed/Y7zNlEMDmI4" frameborder="0" allowfullscreen></iframe>
-</div>
-HTML;
-$phishContentExploreH2 = <<<HTML
-Explore More
-HTML;
-$phishContentP4 = <<<HTML
-Ready to learn more about phishing and how to protect yourself online? Click the buttons below to explore different types of phishing attacks:
-HTML;
-$phishContentLinks = <<<HTML
-<a href="phishing.php" class="next-button">Email Phishing</a>
-<a href="websitePhishing.php" class="next-button">Website Phishing</a>
-<a href="Vishing.php" class="next-button">Vishing</a>
-<a href="Smishing.php" class="next-button">Smishing</a>
-HTML;
-
-//About Content
+//About Page
 $aboutContentH1 = <<<HTML
 About PhishGuardian
 HTML;
@@ -75,8 +41,7 @@ PhishGuardian is your dedicated resource for learning about phishing and improvi
 Phishing is a common cyber threat where scammers try to trick you into giving away personal information, like passwords or credit card numbers. This is done by pretending to be someone trustworthy, such as a bank or government agency. 
 Our platform provides comprehensive education and practical tools to help you recognize and avoid these scams. 
 HTML;
-$aboutContent3 = <<<HTML
-Why Choose PhishGuardian?
+$aboutContentH3 = <<<HTML
 HTML;
 $aboutContentP3 = <<<HTML
 Designed specifically for older adults, PhishGuardian offers user-friendly and accessible resources that cater to your learning needs. 
@@ -101,122 +66,69 @@ $aboutContentLink = <<<HTML
 <a href="https://forms.office.com/pages/responsepage.aspx?id=OcL4BRfLVUejRQSHUgY8O_56A3zGRdVHihmTCe-MRvVUQ1VEWDZGM1UyWjRRVk03UTA0SDZQS0g3SS4u" class="next-button">Survey</a>
 HTML;
 
-//Email Phishing Content
-$emailContentH1 = <<<HTML
-Email Phishing
+//Vishing
+$vishingContentH1 = <<<HTML
+Vishing (Voice Phishing)
 HTML;
-$emailContentP1 = <<<HTML
-Email phishing is when bad people send fake emails to trick you into giving away important information like your usernames, passwords, or money details. These emails might look real, like they're from your bank or the government.
-Here are some signs to watch for in phishing emails:
+$vishingContentP1 = <<<HTML
+Vishing, also known as voice phishing, occurs when scammers use phone calls to deceive individuals into providing personal information or financial details. They may pretend to be from legitimate organizations such as banks, government agencies, or tech support companies.
 HTML;
-$emailContentList1 = <<<HTML
-Suspicious sender: Be careful of emails from people you don't know or emails with strange addresses.
-Urgency or fear: Phishing emails often try to scare you into doing something quickly.
-Asking for personal info: Real organizations usually don't ask for important info through email.
-Spelling mistakes: Watch out for emails with lots of mistakes. They might be phishing.
+$vishingContentP2 = <<<HTML
+Here are some signs of vishing to watch out for:
 HTML;
-$emailContentP2 = <<<HTML
-Here's a picture showing what these signs might look like in an email:
+$vishingContentList1 = <<<HTML
+Suspicious caller: Be cautious of calls from unknown numbers or callers using generic or threatening language.
+Urgency or fear: Vishing calls often create a sense of urgency or fear to manipulate victims into providing personal information.
+Request for personal info: Legitimate organizations typically do not request sensitive information over the phone.
+Threats or consequences: Scammers may threaten legal action, fines, or account closure to coerce individuals into sharing personal information.
 HTML;
-$emailPic = <<<HTML
-<div class="image-examples">
-    <img src="email_phishing_example1.jpg" alt="Email Phishing Example 1" class="example-image">
+$vishingContentP3 = <<<HTML
+Below is a visual aid to help your understanding of how vishing works:
+HTML;
+$vishingContentPic = <<<HTML
+    <div class="visual-aid">
+        <img src="vishing1.jpg" alt="Vishing Visual Aid">
+    </div>
+HTML;
+$vishingContentP4 = <<<HTML
+To protect yourself from vishing scams, follow these tips:
+HTML;
+$vishingContentList2 = <<<HTML
+Verify caller identity: If you receive an unexpected call requesting personal information, hang up and call the official number of the organization to confirm the legitimacy of the call.
+Avoid sharing info: Refrain from disclosing personal or financial information over the phone unless you initiated the call and verified the caller's identity.
+Be skeptical: Exercise caution with unsolicited calls, especially those employing urgency or threats to pressure you into divulging information.
+Report suspicious calls: If you receive a suspected vishing call, report it to the relevant authorities or your phone provider.
+HTML;
+$vishingContentH2 = <<<HTML
+Real Life Examples
+HTML;
+$vishingContentP5 = <<<HTML
+<div class="real-life-examples">
+Here are some real-life examples of vishing scams targeting older adults:
+<ul>
+    <li>An older adult receives a call from someone claiming to be from their bank, asking for their account information to "verify" their identity.</li>
+    <li>A senior citizen receives a call from a supposed government agency threatening legal action if they don't provide their social security number immediately.</li>
+</ul>
+You can read more about similar examples below
+<a href="https://www.quostar.com/blog/what-is-vishing/" class="button">Read Here</a>
 </div>
 HTML;
-$emailContentP3 = <<<HTML
-To keep safe from email phishing, remember these tips:
-HTML;
-$emailContentList2 = <<<HTML
-Check sender: Make sure the email comes from who it says it's from before you click on anything or share personal info.
-Don't click strange links: Hover over links to see where they go. If they look odd, don't click them.
-Be careful with attachments: Don't open attachments from people you don't know. They might have bad stuff in them.
-Use spam filters: Turn on spam filters in your email to help stop phishing emails.
-HTML;
-$emailContentP4 = <<<HTML
-Remember, it's best to be careful with emails you didn't expect. If you think an email might be phishing, tell your email provider and delete it.
-HTML;
-$emailContentH1 = <<<HTML
+$vishingContentH3 = <<<HTML
 Frequently Asked Questions
 HTML;
-$emailContentP5 = <<<HTML
-Here are some common questions about email phishing:
+$vishingContentList3 = <<<HTML
+Q: How do scammers obtain my phone number for vishing calls?
+A: Scammers may acquire phone numbers from public directories, data breaches, or random dialing.
+Q: What should I do if I receive a suspicious vishing call?
+A: Hang up immediately and report the call to the appropriate authorities or your phone provider.
 HTML;
-$emailContentList3 = <<<HTML
-Q: How can I identify a phishing email?
-A: Look for signs such as suspicious sender addresses, urgent language, and requests for personal information.
-Q: What should I do if I receive a phishing email?
-A: Do not click on any links or provide any personal information. Report the email to your email provider.
-HTML;
-$emailContentLink = <<<HTML
+$vishingContentLink = <<<HTML
 <a href="phishMain.php" class="next-button">Phishing</a>
+<a href="phishing.php" class="next-button">Email Phishing</a>
 <a href="websitePhishing.php" class="next-button">Website Phishing</a>
-<a href="Vishing.php" class="next-button">Vishing</a>
 <a href="Smishing.php" class="next-button">Smishing</a>
 HTML;
 
-//Vishing Content
-$vishing = <<<HTML
-<h2>Vishing (Voice Phishing)</h2>
-            <p>
-                Vishing, also known as voice phishing, occurs when scammers use phone calls to deceive individuals into providing personal information or financial details. They may pretend to be from legitimate organizations such as banks, government agencies, or tech support companies.
-            </p>
-            <p>
-                Here are some signs of vishing to watch out for:
-            </p>
-            <ul>
-                <li><strong>Caller ID Spoofing:</strong> Scammers may use spoofed caller IDs to make it appear as though they are calling from a trusted source.</li>
-                <li><strong>Urgency or Fear Tactics:</strong> Vishing calls often use urgent language or fear tactics to pressure victims into providing information or taking immediate action.</li>
-                <li><strong>Request for Personal Information:</strong> Be cautious if the caller asks for sensitive information such as social security numbers, account numbers, or passwords.</li>
-                <li><strong>Threats of Consequences:</strong> Scammers may threaten consequences such as legal action, fines, or account closure if personal information is not provided.</li>
-            </ul>
-            <p>
-                To protect yourself from vishing scams, follow these tips:
-            </p>
-            <ul>
-                <li><strong>Verify Caller Identity:</strong> If you receive an unexpected call requesting personal information, hang up and call the official number of the organization to verify the legitimacy of the call.</li>
-                <li><strong>Avoid Sharing Personal Information:</strong> Do not provide personal or financial information over the phone unless you initiated the call and are sure of the caller's identity.</li>
-                <li><strong>Be Skeptical:</strong> Be skeptical of unsolicited calls, especially those that use urgency or threats to pressure you into providing information.</li>
-                <li><strong>Report Suspicious Calls:</strong> If you receive a suspected vishing call, report it to the appropriate authorities or your phone provider.</li>
-            </ul>
-
-            <!-- Visual Aid -->
-            <div class="visual-aid">
-                <h3>Visual Aid</h3>
-                <img src="vishing1.jpg" alt="Vishing Visual Aid">
-            </div>
-
-            <!-- Real-Life Examples -->
-            <div class="real-life-examples">
-                <h3>Real-Life Examples</h3>
-                <p>Here are some real-life examples of vishing scams targeting older adults:</p>
-                <ul>
-                    <li>An older adult receives a call from someone claiming to be from their bank, asking for their account information to "verify" their identity.</li>
-                    <li>A senior citizen receives a call from a supposed government agency threatening legal action if they don't provide their social security number immediately.</li>
-                </ul>
-                <p>You can read more about similar examples below</p>
-                <a href="https://www.quostar.com/blog/what-is-vishing/" class="button">Read Here</a>
-            </div>
-
-            <!-- Frequently Asked Questions -->
-            <div class="faq">
-                <h3>Frequently Asked Questions</h3>
-                <p>Here are some common questions about vishing:</p>
-                <ul>
-                    <li>Q: How do scammers get my phone number for vishing calls?</li>
-                    <li>A: Scammers may obtain phone numbers from public directories, data breaches, or through random dialing.</li>
-                    <li>Q: What should I do if I receive a suspicious vishing call?</li>
-                    <li>A: Hang up immediately and report the call to the appropriate authorities or your phone provider.</li>
-                </ul>
-            </div>
-
-            <a href="phishMain.php" class="next-button">Phishing</a>
-            <a href="phishing.php" class="next-button">Email Phishing</a>
-            <a href="websitePhishing.php" class="next-button">Website Phishing</a>
-            <a href="Smishing.php" class="next-button">Smishing</a>
-
-HTML;
-
-//Smishing content
 $smishing = <<<HTML
 <h2>Smishing (SMS Phishing)</h2>
             <p>
@@ -261,8 +173,6 @@ $smishing = <<<HTML
             <a href="websitePhishing.php" class="next-button">Website Phishing</a>
             <a href="Vishing.php" class="next-button">Vishing</a>
 HTML;
-
-//Web Phishing Content
 $webPhishing = <<<HTML
 <h2>Website Phishing</h2>
 <p>
@@ -313,7 +223,7 @@ $webPhishing = <<<HTML
 <a href="Smishing.php" class="next-button">Smishing</a>
 HTML;
 
-//Resources Content
+//Resource Page
 $resources = <<<HTML
     <h2>Helpful Resources for Phishing Awareness</h2>
     <p>Here are some valuable resources to enhance your knowledge and protect yourself from phishing scams:</p>
@@ -325,4 +235,90 @@ $resources = <<<HTML
     <li><a href="https://www.seniorplanet.org/cyber-security/">Senior Planet - Cyber Security</a> - Articles and resources focused on cyber security for seniors, including tips for recognizing and avoiding phishing attempts.</li>
     </ul>
 HTML;
-?>
+
+//Main Phishing Page
+$phishContentH1 = <<<HTML
+What is Phishing and Why is it Important to Be Aware?
+HTML;
+$phishContentP1 = <<<HTML
+Phishing is when cyber criminals pretend to be people or organizations you trust, like your bank or the government, to fool you into giving away personal information. They want things like your passwords, credit card numbers, or even who you are. It's like someone pretending to be your friend to get things from you that they shouldn't have.
+HTML;
+$phishContentH2 = <<<HTML
+How Does it Work?
+HTML;
+$phishContentP2 = <<<HTML
+Picture getting an email or a message on your phone that seems to be from your bank. It might say something urgent like 'Your account is in trouble, click here to fix it.' But when you click that link or reply to the message, you're not talking to your bank. You're talking to a bad person who wants to steal from you. These bad people want your information to take your money or pretend to be you online. We'll explain more about this in our breakdown of different types of phishing.
+HTML;
+$phishContentP3 = <<<HTML
+Below is a short video to help understand and visualize phishing and its dangers.
+HTML;
+$phishContentVideo = <<<HTML
+<div class="video-container">
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/Y7zNlEMDmI4" frameborder="0" allowfullscreen></iframe>
+</div>
+HTML;
+$phishContentExploreH2 = <<<HTML
+Explore More
+HTML;
+$phishContentP4 = <<<HTML
+Ready to learn more about phishing and how to protect yourself online? Click the buttons below to explore different types of phishing attacks:
+HTML;
+$phishContentLinks = <<<HTML
+<a href="phishing.php" class="next-button">Email Phishing</a>
+<a href="websitePhishing.php" class="next-button">Website Phishing</a>
+<a href="Vishing.php" class="next-button">Vishing</a>
+<a href="Smishing.php" class="next-button">Smishing</a>
+HTML;
+
+//Email Phishing
+$emailContentH1 = <<<HTML
+Frequently Asked Questions
+HTML;
+$emailContentP1 = <<<HTML
+Email phishing is when bad people send fake emails to trick you into giving away important information like your usernames, passwords, or money details. These emails might look real, like they're from your bank or the government.
+Here are some signs to watch for in phishing emails:
+HTML;
+$emailContentList1 = <<<HTML
+Suspicious sender: Be careful of emails from people you don't know or emails with strange addresses.
+Urgency or fear: Phishing emails often try to scare you into doing something quickly.
+Asking for personal info: Real organizations usually don't ask for important info through email.
+Spelling mistakes: Watch out for emails with lots of mistakes. They might be phishing.
+HTML;
+$emailContentP2 = <<<HTML
+Here's a picture showing what these signs might look like in an email:
+HTML;
+$emailPic = <<<HTML
+<div class="image-examples">
+    <img src="email_phishing_example1.jpg" alt="Email Phishing Example 1" class="example-image">
+</div>
+HTML;
+$emailContentP3 = <<<HTML
+To keep safe from email phishing, remember these tips:
+HTML;
+$emailContentList2 = <<<HTML
+Check sender: Make sure the email comes from who it says it's from before you click on anything or share personal info.
+Don't click strange links: Hover over links to see where they go. If they look odd, don't click them.
+Be careful with attachments: Don't open attachments from people you don't know. They might have bad stuff in them.
+Use spam filters: Turn on spam filters in your email to help stop phishing emails.
+HTML;
+$emailContentP4 = <<<HTML
+Remember, it's best to be careful with emails you didn't expect. If you think an email might be phishing, tell your email provider and delete it.
+HTML;
+$emailContentH2 = <<<HTML
+Frequently Asked Questions
+HTML;
+$emailContentP5 = <<<HTML
+Here are some common questions about email phishing:
+HTML;
+$emailContentList3 = <<<HTML
+Q: How can I identify a phishing email?
+A: Look for signs such as suspicious sender addresses, urgent language, and requests for personal information.
+Q: What should I do if I receive a phishing email?
+A: Do not click on any links or provide any personal information. Report the email to your email provider.
+HTML;
+$emailContentLink = <<<HTML
+<a href="phishMain.php" class="next-button">Phishing</a>
+<a href="websitePhishing.php" class="next-button">Website Phishing</a>
+<a href="Vishing.php" class="next-button">Vishing</a>
+<a href="Smishing.php" class="next-button">Smishing</a>
+HTML;

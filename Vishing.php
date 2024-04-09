@@ -86,14 +86,58 @@ $photo = $row['Photo'];
     </div>
 </nav>
 
-    <main>
-
-    <section class="content-block">
+<main>
+        <section class="content-block">
         <?php 
         include_once 'content.php';
-        echo $vishing; ?>
+        ?>
+        <h2><?php echo $vishingContentH1; ?></h2>
+        <p><?php echo $vishingContentP1; ?></p>
+        <p><?php echo $vishingContentP2; ?></p>
+        <ul>
+            <?php
+            // Explode the heredoc string by newline
+            $listItems = explode("\n", $vishingContentList1);
+            foreach ($listItems as $item) {
+                // Trim any leading/trailing whitespace
+                $item = trim($item);
+                // Output each item as a list item
+                echo "<li>$item</li>"; 
+            }
+            ?>
+        </ul>
+        <p><?php echo $vishingContentP3; ?></p>
+        <?php echo $vishingContentPic; ?>
+        <p><?php echo $vishingContentP4; ?></p>
+        <ul>
+            <?php
+            // Explode the heredoc string by newline
+            $listItems = explode("\n", $vishingContentList2);
+            foreach ($listItems as $item) {
+                // Trim any leading/trailing whitespace
+                $item = trim($item);
+                // Output each item as a list item
+                echo "<li>$item</li>"; 
+            }
+            ?>
+        </ul>
+        <h2><?php echo $vishingContentH2; ?></h2>
+        <p><?php echo $vishingContentP5; ?></p>
+        <h2><?php echo $vishingContentH3; ?></h2>
+        <ul>
+            <?php
+            // Explode the heredoc string by newline
+            $listItems = explode("\n", $vishingContentList3);
+            foreach ($listItems as $item) {
+                // Trim any leading/trailing whitespace
+                $item = trim($item);
+                // Output each item as a list item
+                echo "<li>$item</li>"; 
+            }
+            ?>
+        </ul>
+        <?php echo $vishingContentLink; ?>
         </section>
-
     </main>
 
 </body>

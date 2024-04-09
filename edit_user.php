@@ -3,12 +3,12 @@
 include 'dbh.inc.php';
 include 'dbhKey.inc.php';
 // Check if User_ID is set in the session
-if (!isset($_SESSION['AdminName'])) {
+/*if (!isset($_SESSION['AdminName'])) {
     http_response_code(401);
     // Redirect to a generic error page
     header("Location: error.php"); 
     exit; // Stop further execution
-}
+}*/
 // Check if user ID is provided in the URL
 if (isset($_GET['id'])) {
     $user_id = $_GET['id'];

@@ -2,7 +2,13 @@
 // Read the content from content.php
 include_once 'content.php';
 include 'dbh.inc.php';
-
+// Check if User_ID is set in the session
+if (!isset($_SESSION['AdminName'])) {
+    http_response_code(401);
+    // Redirect to a generic error page
+    header("Location: error.php"); 
+    exit; // Stop further execution
+}
 // Initialize content variable
 $content = '';
 
@@ -67,7 +73,43 @@ if (isset($_GET['section'])) {
             $content = $aboutContentLink;
             break;   
         case 'vishing':
-            $content = $vishing;
+            $content = $vishingContentH1;
+            break;
+        case 'vishingP1':
+            $content = $vishingContentP1;
+            break;
+        case 'vishingP2':
+            $content = $vishingContentP2;
+            break;
+        case 'vishingList1':
+            $content = $vishingContentList1;
+            break;
+        case 'vishingP3':
+            $content = $vishingContentP3;
+            break;
+        case 'vishingPic':
+            $content = $vishingContentPic;
+            break;
+        case 'vishingP4':
+            $content = $vishingContentP4;
+            break;
+        case 'vishingList2':
+            $content = $vishingContentList2;
+            break;
+        case 'vishingH2':
+            $content = $vishingContentH2;
+            break;
+        case 'vishingP5':
+            $content = $vishingContentP5;
+            break;
+        case 'vishingH3':
+            $content = $vishingContentH3;
+            break;
+        case 'vishingList3':
+            $content = $vishingContentList3;
+            break;
+        case 'vishingLink':
+            $content = $vishingContentLink;
             break;
         case 'smishing':
             $content = $smishing;
@@ -141,9 +183,6 @@ if (isset($_GET['section'])) {
         case 'emailContentLink':
             $content = $emailContentLink;
             break;
-        default:
-            // Default to empty content if section is not recognized
-            $content = '';
     }
 }
 
@@ -176,7 +215,6 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             $homepageContentP3 = $updatedContent;
             break;
         case 'about':
-            // Update the about content variables
             $aboutContentH1 = $updatedContent;
             break; 
         case 'aboutP1':
@@ -210,7 +248,43 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             $aboutContentLink = $updatedContent;
             break;   
         case 'vishing':
-            $vishing = $updatedContent;
+            $vishingContentH1 = $updatedContent;
+            break;
+        case 'vishingP1':
+            $vishingContentP1 = $updatedContent;
+            break;
+        case 'vishingP2':
+            $vishingContentP2 = $updatedContent;
+            break;
+        case 'vishingList1':
+            $vishingContentList1 = $updatedContent;
+            break;
+        case 'vishingP3':
+            $vishingContentP3 = $updatedContent;
+            break;
+        case 'vishingPic':
+            $vishingContentPic = $updatedContent;
+            break;
+        case 'vishingP4':
+            $vishingContentP4 = $updatedContent;
+            break;
+        case 'vishingList2':
+            $vishingContentList2 = $updatedContent;
+            break;
+        case 'vishingH2':
+            $vishingContentH2 = $updatedContent;
+            break;
+        case 'vishingP5':
+            $vishingContentP5 = $updatedContent;
+            break;
+        case 'vishingH3':
+            $vishingContentH3 = $updatedContent;
+            break;
+        case 'vishingList3':
+            $vishingContentList3 = $updatedContent;
+            break;
+        case 'vishingLink':
+            $vishingContentLink = $updatedContent;
             break;
         case 'smishing':
             $smishing = $updatedContent;
@@ -221,7 +295,6 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         case 'resources':
             $resources = $updatedContent;
             break;
-        // Add cases for the new content variables
         case 'phishContentH1':
             $phishContentH1 = $updatedContent;
             break;
@@ -249,7 +322,6 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         case 'phishContentLinks':
             $phishContentLinks = $updatedContent;
             break;
-        // Add additional cases for other sections if needed
         case 'emailContentH1':
             $emailContentH1 = $updatedContent;
             break;
@@ -286,7 +358,6 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         case 'emailContentLink':
             $emailContentLink = $updatedContent;
             break;
-        // Add additional cases for other sections if needed
     }
 
     // Write all content back to content.php
@@ -309,8 +380,19 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         '$aboutContentH5 = <<<HTML' . PHP_EOL . $aboutContentH5 . PHP_EOL . 'HTML;' . PHP_EOL .
         '$aboutContentP4 = <<<HTML' . PHP_EOL . $aboutContentP4 . PHP_EOL . 'HTML;' . PHP_EOL .
         '$aboutContentLink = <<<HTML' . PHP_EOL . $aboutContentLink . PHP_EOL . 'HTML;' . PHP_EOL .
-        '$emailPhishing = <<<HTML' . PHP_EOL . $emailPhishing . PHP_EOL . 'HTML;' . PHP_EOL .
-        '$vishing = <<<HTML' . PHP_EOL . $vishing . PHP_EOL . 'HTML;' . PHP_EOL .
+        '$vishingContentH1 = <<<HTML' . PHP_EOL . $vishingContentH1 . PHP_EOL . 'HTML;' . PHP_EOL .
+        '$vishingContentP1 = <<<HTML' . PHP_EOL . $vishingContentP1 . PHP_EOL . 'HTML;' . PHP_EOL .
+        '$vishingContentP2 = <<<HTML' . PHP_EOL . $vishingContentP2 . PHP_EOL . 'HTML;' . PHP_EOL .
+        '$vishingContentList1 = <<<HTML' . PHP_EOL . $vishingContentList1 . PHP_EOL . 'HTML;' . PHP_EOL .
+        '$vishingContentP3 = <<<HTML' . PHP_EOL . $vishingContentP3 . PHP_EOL . 'HTML;' . PHP_EOL .
+        '$vishingContentPic = <<<HTML' . PHP_EOL . $vishingContentPic . PHP_EOL . 'HTML;' . PHP_EOL .
+        '$vishingContentP4 = <<<HTML' . PHP_EOL . $vishingContentP4 . PHP_EOL . 'HTML;' . PHP_EOL .
+        '$vishingContentList2 = <<<HTML' . PHP_EOL . $vishingContentList2 . PHP_EOL . 'HTML;' . PHP_EOL .
+        '$vishingContentH2 = <<<HTML' . PHP_EOL . $vishingContentH2 . PHP_EOL . 'HTML;' . PHP_EOL .
+        '$vishingContentP5 = <<<HTML' . PHP_EOL . $vishingContentP5 . PHP_EOL . 'HTML;' . PHP_EOL .
+        '$vishingContentH3 = <<<HTML' . PHP_EOL . $vishingContentH3 . PHP_EOL . 'HTML;' . PHP_EOL .
+        '$vishingContentList3 = <<<HTML' . PHP_EOL . $vishingContentList3 . PHP_EOL . 'HTML;' . PHP_EOL .
+        '$vishingContentLink = <<<HTML' . PHP_EOL . $vishingContentLink . PHP_EOL . 'HTML;' . PHP_EOL .
         '$smishing = <<<HTML' . PHP_EOL . $smishing . PHP_EOL . 'HTML;' . PHP_EOL .
         '$webPhishing = <<<HTML' . PHP_EOL . $webPhishing . PHP_EOL . 'HTML;' . PHP_EOL .
         '$resources = <<<HTML' . PHP_EOL . $resources . PHP_EOL . 'HTML;' . PHP_EOL .
@@ -334,8 +416,8 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         '$emailContentH2 = <<<HTML' . PHP_EOL . $emailContentH2 . PHP_EOL . 'HTML;' . PHP_EOL .
         '$emailContentP5 = <<<HTML' . PHP_EOL . $emailContentP5 . PHP_EOL . 'HTML;' . PHP_EOL .
         '$emailContentList3 = <<<HTML' . PHP_EOL . $emailContentList3 . PHP_EOL . 'HTML;' . PHP_EOL .
-        '$emailContentLink = <<<HTML' . PHP_EOL . $emailContentLink . PHP_EOL . 'HTML;' . PHP_EOL);
-
+        '$emailContentLink = <<<HTML' . PHP_EOL . $emailContentLink . PHP_EOL . 'HTML;' . PHP_EOL .
+        '?>');
     // Redirect to the same page to avoid form resubmission on refresh
     header('Location: editContent.php?section=' . $section);
     exit;
@@ -457,7 +539,19 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         </div>
         <div class="section-buttons">
             <h2>Vishing Content</h2>
-            <button type="button" onclick="loadContent('vishing')">Vishing Content</button>
+            <button type="button" onclick="loadContent('vishing')">Vishing Content Heading 1</button>
+            <button type="button" onclick="loadContent('vishingP1')">Vishing Content Paragraph 1</button>
+            <button type="button" onclick="loadContent('vishingP2')">Vishing Content Paragraph 2</button>
+            <button type="button" onclick="loadContent('vishingList1')">Vishing Content List 1</button>
+            <button type="button" onclick="loadContent('vishingP3')">Vishing Paragraph 3</button>
+            <button type="button" onclick="loadContent('vishingPic')">Vishing Picture</button>
+            <button type="button" onclick="loadContent('vishingP4')">Vishing Content Paragraph 4</button>
+            <button type="button" onclick="loadContent('vishingList2')">Vishing Content List 2</button>
+            <button type="button" onclick="loadContent('vishingH2')">Vishing Content Heading 2</button>
+            <button type="button" onclick="loadContent('vishingP5')">Vishing Content Paragraph 5</button>
+            <button type="button" onclick="loadContent('vishingH3')">Vishing Content Heading 3</button>
+            <button type="button" onclick="loadContent('vishingList3')">Vishing Content List 3</button>
+            <button type="button" onclick="loadContent('vishingLink')">Vishing Content Link</button>
         </div>
         <div class="section-buttons">
             <h2>Smishing Content</h2>
